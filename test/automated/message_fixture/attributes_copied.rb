@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Message Fixture" do
   context "Assert Attributes Copied" do
@@ -18,7 +18,7 @@ context "Message Fixture" do
 
     fixture.assert_attributes_copied(attribute_names)
 
-    context_text = 'Attributes Copied: Input => Output'
+    context_text = "Attributes Copied: Input => Output"
 
     context "Context: \"#{context_text}\"" do
       printed = fixture.test_session.context?(context_text)
@@ -29,9 +29,9 @@ context "Message Fixture" do
     end
 
     assignments = [
-      'example_id',
-      'quantity => amount',
-      'time'
+      "example_id",
+      "quantity => amount",
+      "time"
     ]
 
     assignments.each do |assignment|

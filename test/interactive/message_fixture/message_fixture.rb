@@ -1,4 +1,4 @@
-require_relative '../interactive_init'
+require_relative "../interactive_init"
 
 context "Message Fixture" do
   source_message = Controls::Message.example
@@ -11,8 +11,8 @@ context "Message Fixture" do
     :time,
   ]
 
-  source_message.metadata.correlation_stream_name = 'someCorrelationStream'
-  source_message.metadata.reply_stream_name = 'someReplyStream'
+  source_message.metadata.correlation_stream_name = "someCorrelationStream"
+  source_message.metadata.reply_stream_name = "someReplyStream"
 
   message = message_class.follow(source_message, copy: attribute_names)
 
@@ -38,8 +38,8 @@ context "Message Fixture" do
     message.assert_attributes_assigned
 
     message.assert_metadata do |metadata|
-      metadata.assert_correlation_stream_name('someCorrelationStream')
-      metadata.assert_reply_stream_name('someReplyStream')
+      metadata.assert_correlation_stream_name("someCorrelationStream")
+      metadata.assert_reply_stream_name("someReplyStream")
     end
   end
 end

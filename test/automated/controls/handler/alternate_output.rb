@@ -1,10 +1,10 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Handle" do
   context "Input" do
     handler = Controls::Handler.example
 
-    context "Handler: #{handler.class.name.split('::').last}" do
+    context "Handler: #{handler.class.name.split("::").last}" do
       detail "Handler Class: #{handler.class.name}"
 
       input = Controls::Message.example
@@ -47,7 +47,7 @@ context "Handle" do
             input,
             attribute_names,
             print_title_context: false,
-            attributes_context_name: 'Message'
+            attributes_context_name: "Message"
           )
 
           metadata_attribute_names = [
@@ -61,7 +61,7 @@ context "Handle" do
             input.metadata,
             metadata_attribute_names,
             print_title_context: false,
-            attributes_context_name: 'Metadata'
+            attributes_context_name: "Metadata"
           )
         end
       end
@@ -70,7 +70,7 @@ context "Handle" do
 
       writer = handler.write
 
-      output_category = 'example'
+      output_category = "example"
 
       output_class = Controls::Event::AlternateOutput
       context "Output Message: #{output_class.message_type}" do
@@ -151,7 +151,7 @@ context "Handle" do
               copied_attribute_names,
               ignore_class: true,
               print_title_context: false,
-              attributes_context_name: 'Copied'
+              attributes_context_name: "Copied"
             )
 
             context "Assigned" do
@@ -175,7 +175,7 @@ context "Handle" do
 
           context "Metadata" do
             context "Assigned" do
-              { correlation_stream_name: 'someCorrelationStream', reply_stream_name: 'someReplyStream' }.each do |name, value|
+              { correlation_stream_name: "someCorrelationStream", reply_stream_name: "someReplyStream" }.each do |name, value|
                 context do
                   metadata_value = output.metadata.public_send(name)
                   compare_value = value
@@ -206,7 +206,7 @@ context "Handle" do
             output,
             changed_attribute_names,
             print_title_context: false,
-            attributes_context_name: 'Attributes Have Been Set'
+            attributes_context_name: "Attributes Have Been Set"
           )
         end
       end

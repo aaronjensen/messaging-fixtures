@@ -1,10 +1,10 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Metadata Fixture" do
   context "Assert Correlation Stream Name" do
     metadata = Controls::Metadata.example
 
-    correlation_stream_name = 'someCorrelationStream'
+    correlation_stream_name = "someCorrelationStream"
     metadata.correlation_stream_name = correlation_stream_name
 
     fixture = Metadata.build(metadata)
@@ -12,7 +12,7 @@ context "Metadata Fixture" do
     fixture.assert_correlation_stream_name(correlation_stream_name)
 
     context "correlation_stream_name" do
-      passed = fixture.test_session.test_passed?('correlation_stream_name')
+      passed = fixture.test_session.test_passed?("correlation_stream_name")
 
       test "Passed" do
         assert(passed)

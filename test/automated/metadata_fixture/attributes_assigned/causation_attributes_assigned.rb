@@ -1,4 +1,4 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Metadata Fixture" do
   context "Assert Causation Attributes Assigned" do

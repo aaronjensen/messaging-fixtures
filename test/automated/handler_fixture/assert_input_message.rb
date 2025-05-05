@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Handler Fixture" do
   context "Assert Input Message" do

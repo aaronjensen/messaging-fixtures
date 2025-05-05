@@ -1,4 +1,4 @@
-require_relative 'test/test_init'
+require_relative "test/test_init"
 
 class SomeMessage
   include Messaging::Message
@@ -95,10 +95,10 @@ class SomeHandler
 
     some_event.processed_time = time
 
-    some_event.metadata.correlation_stream_name = 'someCorrelationStream'
-    some_event.metadata.reply_stream_name = 'someReplyStream'
+    some_event.metadata.correlation_stream_name = "someCorrelationStream"
+    some_event.metadata.reply_stream_name = "someReplyStream"
 
-    stream_name = stream_name(something_id, category: 'something')
+    stream_name = stream_name(something_id, category: "something")
 
     write.(some_event, stream_name, expected_version: version)
   end
@@ -166,8 +166,8 @@ context "Handle SomeMessage" do
       written_message.assert_attributes_assigned
 
       written_message.assert_metadata do |metadata|
-        metadata.assert_correlation_stream_name('someCorrelationStream')
-        metadata.assert_reply_stream_name('someReplyStream')
+        metadata.assert_correlation_stream_name("someCorrelationStream")
+        metadata.assert_reply_stream_name("someReplyStream")
       end
     end
 

@@ -1,4 +1,4 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Message Fixture" do
   context "Assert Attributes Copied" do
@@ -18,7 +18,7 @@ context "Message Fixture" do
 
     fixture.assert_attributes_copied(attribute_names)
 
-    context_text = 'Attributes Copied: Input => Output'
+    context_text = "Attributes Copied: Input => Output"
 
     context "Context: \"#{context_text}\"" do
       printed = fixture.test_session.context?(context_text)
@@ -29,7 +29,7 @@ context "Message Fixture" do
     end
 
     context "example_id" do
-      passed = fixture.test_session.test_passed?(context_text, 'example_id')
+      passed = fixture.test_session.test_passed?(context_text, "example_id")
 
       test "Passed" do
         assert(passed)
@@ -37,7 +37,7 @@ context "Message Fixture" do
     end
 
     context "quantity => amount" do
-      passed = fixture.test_session.test_passed?(context_text, 'quantity => amount')
+      passed = fixture.test_session.test_passed?(context_text, "quantity => amount")
 
       test "Passed" do
         assert(passed)
@@ -45,7 +45,7 @@ context "Message Fixture" do
     end
 
     context "time" do
-      passed = fixture.test_session.test_passed?(context_text, 'time')
+      passed = fixture.test_session.test_passed?(context_text, "time")
 
       test "Passed" do
         assert(passed)

@@ -1,4 +1,4 @@
-require_relative '../interactive_init'
+require_relative "../interactive_init"
 
 context "Follows Fixture" do
   source_metadata = Controls::Metadata.example

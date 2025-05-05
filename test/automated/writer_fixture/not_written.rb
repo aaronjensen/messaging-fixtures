@@ -1,9 +1,9 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Writer Fixture" do
   context "Not Written" do
     writer = Messaging::Write::Substitute.build
-    stream_name = 'someStreamName'
+    stream_name = "someStreamName"
 
     message_class = Controls::Message::Random.example_class
 
@@ -11,7 +11,7 @@ context "Writer Fixture" do
 
     fixture.()
 
-    failed = fixture.test_session.test_failed?('Written')
+    failed = fixture.test_session.test_failed?("Written")
 
     test "Failed" do
       assert(failed)

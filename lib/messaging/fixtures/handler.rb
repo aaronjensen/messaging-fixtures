@@ -52,7 +52,7 @@ module Messaging
       end
 
       def call
-        context "Handler: #{handler.class.name.split('::').last}" do
+        context "Handler: #{handler.class.name.split("::").last}" do
           detail "Handler Class: #{handler.class.name}"
 
           if test_block.nil?

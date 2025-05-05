@@ -1,4 +1,4 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Handler Fixture" do
   context "Assert Write" do
@@ -14,7 +14,7 @@ context "Handler Fixture" do
 
       fixture.assert_write(output_message_class) {}
 
-      passed = fixture.test_session.test_passed?('Written')
+      passed = fixture.test_session.test_passed?("Written")
 
       test "Passed" do
         assert(passed)

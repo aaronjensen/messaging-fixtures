@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Writer Fixture" do
   context "Written" do
@@ -12,7 +12,7 @@ context "Writer Fixture" do
 
     fixture.()
 
-    passed = fixture.test_session.test_passed?('Written')
+    passed = fixture.test_session.test_passed?("Written")
 
     test "Passed" do
       assert(passed)

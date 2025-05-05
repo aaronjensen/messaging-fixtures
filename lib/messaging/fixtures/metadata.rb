@@ -54,17 +54,17 @@ module Messaging
 
       def assert_source_attributes_assigned
         attribute_names = Messaging::Message::Metadata.source_attribute_names
-        assert_attributes_assigned(attribute_names, context_title_qualifier: 'Source')
+        assert_attributes_assigned(attribute_names, context_title_qualifier: "Source")
       end
 
       def assert_workflow_attributes_assigned
         attribute_names = Messaging::Message::Metadata.workflow_attribute_names
-        assert_attributes_assigned(attribute_names, context_title_qualifier: 'Workflow')
+        assert_attributes_assigned(attribute_names, context_title_qualifier: "Workflow")
       end
 
       def assert_causation_attributes_assigned
         attribute_names = Messaging::Message::Metadata.causation_attribute_names
-        assert_attributes_assigned(attribute_names, context_title_qualifier: 'Causation')
+        assert_attributes_assigned(attribute_names, context_title_qualifier: "Causation")
       end
 
       def assert_correlation_stream_name(correlation_stream_name)

@@ -11,7 +11,7 @@ module Messaging
       end
 
       def message_type
-        message_class.name.split('::').last
+        message_class.name.split("::").last
       end
 
       def source_message_class
@@ -19,7 +19,7 @@ module Messaging
       end
 
       def source_message_type
-        source_message_class.name.split('::').last
+        source_message_class.name.split("::").last
       end
 
       def print_title_context?

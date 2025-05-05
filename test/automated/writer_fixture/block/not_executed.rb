@@ -1,4 +1,4 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Writer Fixture" do
   context "Block" do
@@ -28,7 +28,7 @@ context "Writer Fixture" do
       end
 
       context "Written" do
-        failed = fixture.test_session.test_failed?(context_text, 'Written')
+        failed = fixture.test_session.test_failed?(context_text, "Written")
 
         test "Failed" do
           assert(failed)
@@ -36,7 +36,7 @@ context "Writer Fixture" do
       end
 
       context "Skipped Tests Detail Notice" do
-        printed = fixture.test_session.detail?(context_text, 'Remaining message tests are skipped')
+        printed = fixture.test_session.detail?(context_text, "Remaining message tests are skipped")
 
         test "Printed" do
           assert(printed)

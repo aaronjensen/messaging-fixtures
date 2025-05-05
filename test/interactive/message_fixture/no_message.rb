@@ -1,4 +1,4 @@
-require_relative '../interactive_init'
+require_relative "../interactive_init"
 
 context "Message Fixture" do
   context "No Message" do
@@ -9,7 +9,7 @@ context "Message Fixture" do
       message
     ) do |message|
 
-      fail 'Block will not be executed'
+      fail "Block will not be executed"
 
     end
   end

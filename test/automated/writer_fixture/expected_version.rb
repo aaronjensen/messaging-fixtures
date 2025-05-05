@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Writer Fixture" do
   context "Assert Expected Version" do
@@ -13,7 +13,7 @@ context "Writer Fixture" do
 
       fixture.assert_expected_version(11)
 
-      passed = fixture.test_session.test_passed?('Expected version')
+      passed = fixture.test_session.test_passed?("Expected version")
 
       test "Passed" do
         assert(passed)
@@ -31,7 +31,7 @@ context "Writer Fixture" do
 
       fixture.assert_expected_version(11)
 
-      failed = fixture.test_session.test_failed?('Expected version')
+      failed = fixture.test_session.test_failed?("Expected version")
 
       test "Failed" do
         assert(failed)

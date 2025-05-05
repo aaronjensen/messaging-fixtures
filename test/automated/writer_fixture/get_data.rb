@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Writer Fixture" do
   context "Get Data" do
@@ -7,7 +7,7 @@ context "Writer Fixture" do
       message = Controls::Event.example
       stream_name = "example-#{message.example_id}"
       expected_version = 1
-      reply_stream_name = 'someReplyStream'
+      reply_stream_name = "someReplyStream"
 
       writer.(message, stream_name, expected_version: expected_version, reply_stream_name: reply_stream_name)
 

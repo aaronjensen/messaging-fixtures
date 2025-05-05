@@ -1,11 +1,11 @@
-require_relative '../../automated_init'
+require_relative "../../automated_init"
 
 context "Handle" do
   context "Input" do
     context "Ignored" do
       handler = Controls::Handler.example
 
-      context "Handler: #{handler.class.name.split('::').last}" do
+      context "Handler: #{handler.class.name.split("::").last}" do
         detail "Handler Class: #{handler.class.name}"
 
         input = Controls::Message.example

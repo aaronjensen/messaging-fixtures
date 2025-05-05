@@ -1,4 +1,4 @@
-require_relative '../../../automated_init'
+require_relative "../../../automated_init"
 
 context "Handler Fixture" do
   context "Refute Write" do
@@ -15,7 +15,7 @@ context "Handler Fixture" do
 
         fixture.refute_write(output_message_class)
 
-        failed = fixture.test_session.test_failed?('Not written')
+        failed = fixture.test_session.test_failed?("Not written")
 
         test "Failed" do
           assert(failed)

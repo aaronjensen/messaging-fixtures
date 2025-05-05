@@ -1,4 +1,4 @@
-require_relative '../interactive_init'
+require_relative "../interactive_init"
 
 context "Handler Fixture" do
   handler = Controls::Handler.example
@@ -57,8 +57,8 @@ context "Handler Fixture" do
       written_message.assert_all_attributes_assigned
 
       written_message.assert_metadata do |metadata|
-        metadata.assert_correlation_stream_name('someCorrelationStream')
-        metadata.assert_reply_stream_name('someReplyStream')
+        metadata.assert_correlation_stream_name("someCorrelationStream")
+        metadata.assert_reply_stream_name("someReplyStream")
       end
     end
 

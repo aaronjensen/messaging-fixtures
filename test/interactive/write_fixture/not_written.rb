@@ -1,10 +1,10 @@
-require_relative '../interactive_init'
+require_relative "../interactive_init"
 
 context "Writer Fixture" do
   writer = Messaging::Write::Substitute.build
-  stream_name = 'someStreamName'
+  stream_name = "someStreamName"
   expected_version = 1
-  reply_stream_name = 'someReplyStream'
+  reply_stream_name = "someReplyStream"
 
   message_class = Controls::Message::Random.example_class
 

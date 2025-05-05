@@ -1,4 +1,4 @@
-require_relative '../automated_init'
+require_relative "../automated_init"
 
 context "Writer Fixture" do
   context "Assert Stream Name" do
@@ -13,7 +13,7 @@ context "Writer Fixture" do
 
       fixture.assert_stream_name(stream_name)
 
-      passed = fixture.test_session.test_passed?('Stream name')
+      passed = fixture.test_session.test_passed?("Stream name")
 
       test "Passed" do
         assert(passed)
@@ -31,7 +31,7 @@ context "Writer Fixture" do
 
       fixture.assert_stream_name(stream_name)
 
-      failed = fixture.test_session.test_failed?('Stream name')
+      failed = fixture.test_session.test_failed?("Stream name")
 
       test "Failed" do
         assert(failed)

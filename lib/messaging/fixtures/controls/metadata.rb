@@ -52,28 +52,28 @@ module Messaging
         end
 
         def self.correlation_stream_name
-          'someCorrelationStream'
+          "someCorrelationStream"
         end
 
         def self.reply_stream_name
-          'someReplyStream'
+          "someReplyStream"
         end
 
         def self.properties
           {
-            :some_property => 'some property value'
+            :some_property => "some property value"
           }
         end
 
         def self.local_properties
           {
-            :some_local_property => 'some local property value'
+            :some_local_property => "some local property value"
           }
         end
 
         def self.local_properties
           {
-            some_local_property: 'some local property value'
+            some_local_property: "some local property value"
           }
         end
 
@@ -82,7 +82,7 @@ module Messaging
         end
 
         def self.schema_version
-          '1'
+          "1"
         end
       end
     end
